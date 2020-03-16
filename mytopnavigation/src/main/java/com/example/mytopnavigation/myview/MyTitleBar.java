@@ -16,6 +16,9 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.example.mytopnavigation.R;
 
+/**
+ * 自定义标题栏的类
+ */
 public class MyTitleBar extends ConstraintLayout implements View.OnClickListener {
 
     private boolean shared_visible;//自定义属性是否显示分享按钮

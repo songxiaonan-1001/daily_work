@@ -64,6 +64,8 @@ public class WeChatFragment extends Fragment implements RecyclerAdapter.OnItemCl
     public void onItemClick(int position) {
         Log.i("tag", "onItemClick: 点击条目" + position);
         Intent intent = new Intent(getActivity(), DetailActivity.class);
+        String s = stringList.get(position);
+        intent.putExtra("name",s);
         startActivity(intent);
     }
 }

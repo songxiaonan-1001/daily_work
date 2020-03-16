@@ -1,6 +1,7 @@
 package com.example.mytopnavigation;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -61,7 +62,26 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
         mTablayout.getTabAt(3).setText(R.string.me).setIcon(R.drawable.selector_me);
 
         //viewpager的滑动监听
-        mViewPager.setOnPageChangeListener(this);
+        mViewPager.addOnPageChangeListener(this);
+        //tablayout的点击监听
+        mTablayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                //选中时触发
+                txt_wechat.setText(tab.getText());
+                //Log.i("tag", "onTabSelected: 点击了"+tab.getText());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+                //未选中时触发
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+                //选中后再次点击即复选时触发
+            }
+        });
     }
 
     private void initView() {
@@ -78,6 +98,11 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
 
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+    }
+
+    @Override
+    public void onPageSelected(int position) {
         switch (position) {
             case 0:
                 txt_wechat.setText(R.string.wechat);
@@ -89,14 +114,9 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
                 txt_wechat.setText(R.string.find);
                 break;
             case 3:
-                txt_wechat.setVisibility(View.GONE);
+                txt_wechat.setText(R.string.me);
                 break;
         }
-    }
-
-    @Override
-    public void onPageSelected(int position) {
-
     }
 
     @Override

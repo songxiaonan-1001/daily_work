@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyTitleBar">
+        <attr name="title_shared_visible" format="boolean"></attr>
+        <attr name="title_word" format="string"></attr>
+    </declare-styleable>
+</resources>

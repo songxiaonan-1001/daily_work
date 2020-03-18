@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <!--灰色背景-->
+    <color name="colorGray">#C2C2C2</color>
+    <!--白色背景-->
+    <color name="colorWhite">#FFFFFF</color>
+    <!--边框颜色-->
+    <color name="colorBorder">#424242</color>
+    <!--文字:黑色-->
+    <color name="colorBlackText">#000000</color>
+    <!--文字:灰色-->
+    <color name="colorGrayText">#727272</color>
+</resources>

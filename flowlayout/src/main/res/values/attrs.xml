@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FlowLayout">
+        <!--横向间距,纵向间距,最大行数,最大列数-->
+        <attr name="h_space" format="dimension" />
+        <attr name="v_space" format="dimension" />
+        <attr name="maxlines" format="integer" />
+        <attr name="maxcolums" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="MyTiltleBar">
+
+    </declare-styleable>
+</resources>

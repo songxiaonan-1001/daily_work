@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">流式布局</string>
+    <string name="hot_search">热门搜索</string>
+    <string name="search_history">搜索历史</string>
+    <string name="search">搜索</string>
+</resources>
